@@ -1,0 +1,12 @@
+eureka:
+ instance:
+  hostname: localhost
+ client:
+  fetch-registry: false # 该属性明确该注册中心如何与其他的注册中心配合使用，开发默认为false
+  register-with-eureka: false # 该属性明确该注册中心如何与其他的注册中心配合使用，开发默认为false
+  service-url:
+   defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+ server:
+  enable-self-preservation: false # 该属性为错误自检。开发不需要，而生产上面很注重
+server:
+ port: 8761
