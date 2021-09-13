@@ -12,3 +12,10 @@ spring:
     url: jdbc:mysql://localhost:3306/boomshair?autoReconnect=true&characterEncoding=utf-8
     username: root
     password: 123456
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 3000
+  session:
+    timeout: 10
+    store-type: redis
