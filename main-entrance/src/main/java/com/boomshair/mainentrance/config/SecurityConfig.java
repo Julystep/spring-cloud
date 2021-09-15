@@ -36,7 +36,7 @@ public class SecurityConfig  {
         formLoginSpec.authenticationSuccessHandler(authenticationSuccessHandler);
         return http.csrf().disable()
                 .cors().disable()
-                .authorizeExchange().pathMatchers("/login", "/user/register").permitAll()
+                .authorizeExchange().pathMatchers( "/user/register").permitAll()
                 .anyExchange().authenticated()
                 .and().httpBasic()
                 .and().build();

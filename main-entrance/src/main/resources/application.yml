@@ -17,5 +17,17 @@ spring:
     port: 6379
     timeout: 3000
   session:
-    timeout: 10
     store-type: redis
+    timeout: 3000
+  cloud:
+    gateway:
+      routes:
+        - id: route-picture-service
+          uri: lb://picture-service
+          predicates:
+            - Path=/picture/**
+            - After=2021-08-25T10:22:33.789+08:00
+        - id: ask-baidu
+          uri: http://www.baidu.com
+          predicates:
+            - After=2021-08-25T10:22:33.789+08:00

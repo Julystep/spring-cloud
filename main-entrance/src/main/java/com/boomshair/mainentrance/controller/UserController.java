@@ -33,9 +33,5 @@ public class UserController {
                 });
     }
 
-    @GetMapping("/testSecurity")
-    public Mono<String> java123() {
-        return Mono.just("right");
-    }
 
 }

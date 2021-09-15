@@ -1,6 +1,8 @@
 spring:
   application:
     name: picture-service
+  webflux:
+    base-path: /picture
 server:
   port: 0
 eureka:
